@@ -34,7 +34,7 @@ namespace FatesEnemyGrowthModifier
                     this.model = new GameDataModel(file);
                     for (int i = 0; i < this.model.classEntries.Length; i++)
                     {
-                        classSelectorComboBox.Items.Add(i);
+                        classSelectorComboBox.Items.Add(ClassNameTable.GetClassNameForIndex(i));
                     }
                 }
                 catch (Exception ex)
