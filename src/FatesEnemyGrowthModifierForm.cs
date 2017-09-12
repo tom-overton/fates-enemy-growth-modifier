@@ -17,6 +17,7 @@ namespace FatesEnemyGrowthModifier
     {
         private GameDataModel model;
         private ClassEntry currentClassEntry = new ClassEntry();
+        private int currentGrowthRateBuffValue = 0;
 
         public FatesEnemyGrowthModifierForm()
         {
@@ -62,6 +63,24 @@ namespace FatesEnemyGrowthModifier
             saveGameDatabinToolStripMenuItem.Enabled = false;
         }
 
+        private void ValidateGrowthRateBufInput()
+        {
+            string value = growthRateBuffTextBox.Text;
+            int inputGrowth;
+            if (int.TryParse(value, out inputGrowth))
+            {
+                this.currentGrowthRateBuffValue = inputGrowth;
+                growthRateBuffTextBox.BackColor = Color.White;
+                this.growthRateBuffButton.Enabled = true;
+                return;
+            }
+
+            // If we got to this point, the input is invalid. Change the color of the input box
+            // to indicate this to the user.
+            growthRateBuffTextBox.BackColor = Color.FromArgb(255, 128, 128);
+            this.growthRateBuffButton.Enabled = false;
+        }
+
         private void hpGrowthTextBox_TextChanged(object sender, EventArgs e)
         {
             ValidateAndSetGrowthInput(hpGrowthTextBox, ref this.currentClassEntry.EnemyHpGrowth);
@@ -102,6 +121,11 @@ namespace FatesEnemyGrowthModifier
             ValidateAndSetGrowthInput(resGrowthTextBox, ref this.currentClassEntry.EnemyResistanceGrowth);
         }
 
+        private void growthRateBuffTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ValidateGrowthRateBufInput();
+        }
+
         private void openGameDatabinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = gameDataOpenFileDialog.ShowDialog();
@@ -132,6 +156,24 @@ namespace FatesEnemyGrowthModifier
         private void saveGameDatabinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.model.WriteCurrentModelToFile();
+        }
+
+        private void growthRateBuffButton_Click(object sender, EventArgs e)
+        {
+            this.model.IncreaseAllGrowthsByValue(this.currentGrowthRateBuffValue);
+            this.setGrowthBoxValues();
+        }
+
+        private void setGrowthBoxValues()
+        {
+            hpGrowthTextBox.Text = this.currentClassEntry.EnemyHpGrowth.ToString();
+            strGrowthTextBox.Text = this.currentClassEntry.EnemyStrengthGrowth.ToString();
+            magGrowthTextBox.Text = this.currentClassEntry.EnemyMagicGrowth.ToString();
+            sklGrowthTextBox.Text = this.currentClassEntry.EnemySkillGrowth.ToString();
+            spdGrowthTextBox.Text = this.currentClassEntry.EnemySpeedGrowth.ToString();
+            lckGrowthTextBox.Text = this.currentClassEntry.EnemyLuckGrowth.ToString();
+            defGrowthTextBox.Text = this.currentClassEntry.EnemyDefenseGrowth.ToString();
+            resGrowthTextBox.Text = this.currentClassEntry.EnemyResistanceGrowth.ToString();
         }
     }
 }

@@ -52,6 +52,9 @@ namespace FatesEnemyGrowthModifier
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameDatabinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveGameDatabinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.growthRateBuffTextBox = new System.Windows.Forms.TextBox();
+            this.growthRateBuffButton = new System.Windows.Forms.Button();
             this.topMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -271,11 +274,46 @@ namespace FatesEnemyGrowthModifier
             this.saveGameDatabinToolStripMenuItem.Text = "Save GameData.bin";
             this.saveGameDatabinToolStripMenuItem.Click += new System.EventHandler(this.saveGameDatabinToolStripMenuItem_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(18, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Increase growths for all classes by";
+            // 
+            // growthRateBuffTextBox
+            // 
+            this.growthRateBuffTextBox.Location = new System.Drawing.Point(227, 189);
+            this.growthRateBuffTextBox.MaxLength = 3;
+            this.growthRateBuffTextBox.Multiline = true;
+            this.growthRateBuffTextBox.Name = "growthRateBuffTextBox";
+            this.growthRateBuffTextBox.Size = new System.Drawing.Size(34, 18);
+            this.growthRateBuffTextBox.TabIndex = 24;
+            this.growthRateBuffTextBox.TextChanged += new System.EventHandler(this.growthRateBuffTextBox_TextChanged);
+            // 
+            // growthRateBuffButton
+            // 
+            this.growthRateBuffButton.Enabled = false;
+            this.growthRateBuffButton.Location = new System.Drawing.Point(15, 213);
+            this.growthRateBuffButton.Name = "growthRateBuffButton";
+            this.growthRateBuffButton.Size = new System.Drawing.Size(248, 23);
+            this.growthRateBuffButton.TabIndex = 25;
+            this.growthRateBuffButton.Text = "Apply Growth Rate Buffs";
+            this.growthRateBuffButton.UseVisualStyleBackColor = true;
+            this.growthRateBuffButton.Click += new System.EventHandler(this.growthRateBuffButton_Click);
+            // 
             // FatesEnemyGrowthModifierForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(284, 250);
+            this.Controls.Add(this.growthRateBuffButton);
+            this.Controls.Add(this.growthRateBuffTextBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.resGrowthTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.defGrowthTextBox);
@@ -327,6 +365,9 @@ namespace FatesEnemyGrowthModifier
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.MenuStrip topMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem saveGameDatabinToolStripMenuItem;
+        private System.Windows.Forms.TextBox growthRateBuffTextBox;
+        private System.Windows.Forms.Button growthRateBuffButton;
+        private System.Windows.Forms.Label label2;
     }
 }
 

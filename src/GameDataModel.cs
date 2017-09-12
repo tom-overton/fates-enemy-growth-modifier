@@ -49,5 +49,35 @@ namespace FatesEnemyGrowthModifier
                 this.file.Seek(Constants.CLASS_ENTRY_SIZE - 8, SeekOrigin.Current);
             }
         }
+
+        public void IncreaseAllGrowthsByValue(int value)
+        {
+            for (int i = 0; i < classEntries.Length; i++)
+            {
+                this.classEntries[i].EnemyHpGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemyHpGrowth, value);
+                this.classEntries[i].EnemyStrengthGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemyStrengthGrowth, value);
+                this.classEntries[i].EnemyMagicGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemyMagicGrowth, value);
+                this.classEntries[i].EnemySkillGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemySkillGrowth, value);
+                this.classEntries[i].EnemySpeedGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemySpeedGrowth, value);
+                this.classEntries[i].EnemyLuckGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemyLuckGrowth, value);
+                this.classEntries[i].EnemyDefenseGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemyDefenseGrowth, value);
+                this.classEntries[i].EnemyResistanceGrowth = AddValueToByteWithoutOverflow(this.classEntries[i].EnemyResistanceGrowth, value);
+            }
+        }
+
+        private byte AddValueToByteWithoutOverflow(byte b, int value)
+        {
+            long sum = b + value;
+            if (sum < 0)
+            {
+                sum = 0;
+            }
+            if (sum > 255)
+            {
+                sum = 255;
+            }
+
+            return (byte)sum;
+        }
     }
 }
