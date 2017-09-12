@@ -30,8 +30,6 @@ namespace FatesEnemyGrowthModifier
         /// </summary>
         private void InitializeComponent()
         {
-            this.filenameBox = new System.Windows.Forms.TextBox();
-            this.openFile = new System.Windows.Forms.Button();
             this.gameDataOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.classSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.hpGrowthLabel = new System.Windows.Forms.Label();
@@ -50,32 +48,17 @@ namespace FatesEnemyGrowthModifier
             this.defGrowthTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.resGrowthTextBox = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openGameDatabinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // filenameBox
-            // 
-            this.filenameBox.Location = new System.Drawing.Point(13, 13);
-            this.filenameBox.Multiline = true;
-            this.filenameBox.Name = "filenameBox";
-            this.filenameBox.Size = new System.Drawing.Size(184, 23);
-            this.filenameBox.TabIndex = 0;
-            this.filenameBox.WordWrap = false;
-            // 
-            // openFile
-            // 
-            this.openFile.Location = new System.Drawing.Point(203, 13);
-            this.openFile.Name = "openFile";
-            this.openFile.Size = new System.Drawing.Size(69, 23);
-            this.openFile.TabIndex = 1;
-            this.openFile.Text = "Open File";
-            this.openFile.UseVisualStyleBackColor = true;
-            this.openFile.Click += new System.EventHandler(this.openFile_Click);
             // 
             // classSelectorComboBox
             // 
             this.classSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.classSelectorComboBox.FormattingEnabled = true;
-            this.classSelectorComboBox.Location = new System.Drawing.Point(13, 43);
+            this.classSelectorComboBox.Location = new System.Drawing.Point(13, 26);
             this.classSelectorComboBox.Name = "classSelectorComboBox";
             this.classSelectorComboBox.Size = new System.Drawing.Size(259, 21);
             this.classSelectorComboBox.TabIndex = 2;
@@ -86,7 +69,7 @@ namespace FatesEnemyGrowthModifier
             this.hpGrowthLabel.AutoSize = true;
             this.hpGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hpGrowthLabel.ForeColor = System.Drawing.Color.Black;
-            this.hpGrowthLabel.Location = new System.Drawing.Point(14, 88);
+            this.hpGrowthLabel.Location = new System.Drawing.Point(17, 62);
             this.hpGrowthLabel.Name = "hpGrowthLabel";
             this.hpGrowthLabel.Size = new System.Drawing.Size(68, 13);
             this.hpGrowthLabel.TabIndex = 3;
@@ -94,7 +77,7 @@ namespace FatesEnemyGrowthModifier
             // 
             // hpGrowthTextBox
             // 
-            this.hpGrowthTextBox.Location = new System.Drawing.Point(87, 86);
+            this.hpGrowthTextBox.Location = new System.Drawing.Point(90, 60);
             this.hpGrowthTextBox.MaxLength = 3;
             this.hpGrowthTextBox.Multiline = true;
             this.hpGrowthTextBox.Name = "hpGrowthTextBox";
@@ -107,7 +90,7 @@ namespace FatesEnemyGrowthModifier
             this.strGrowthLabel.AutoSize = true;
             this.strGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.strGrowthLabel.ForeColor = System.Drawing.Color.Black;
-            this.strGrowthLabel.Location = new System.Drawing.Point(15, 116);
+            this.strGrowthLabel.Location = new System.Drawing.Point(18, 90);
             this.strGrowthLabel.Name = "strGrowthLabel";
             this.strGrowthLabel.Size = new System.Drawing.Size(67, 13);
             this.strGrowthLabel.TabIndex = 8;
@@ -115,7 +98,7 @@ namespace FatesEnemyGrowthModifier
             // 
             // strGrowthTextBox
             // 
-            this.strGrowthTextBox.Location = new System.Drawing.Point(87, 114);
+            this.strGrowthTextBox.Location = new System.Drawing.Point(90, 88);
             this.strGrowthTextBox.MaxLength = 3;
             this.strGrowthTextBox.Multiline = true;
             this.strGrowthTextBox.Name = "strGrowthTextBox";
@@ -128,7 +111,7 @@ namespace FatesEnemyGrowthModifier
             this.magGrowthLabel.AutoSize = true;
             this.magGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.magGrowthLabel.ForeColor = System.Drawing.Color.Black;
-            this.magGrowthLabel.Location = new System.Drawing.Point(7, 144);
+            this.magGrowthLabel.Location = new System.Drawing.Point(10, 118);
             this.magGrowthLabel.Name = "magGrowthLabel";
             this.magGrowthLabel.Size = new System.Drawing.Size(75, 13);
             this.magGrowthLabel.TabIndex = 10;
@@ -136,7 +119,7 @@ namespace FatesEnemyGrowthModifier
             // 
             // magGrowthTextBox
             // 
-            this.magGrowthTextBox.Location = new System.Drawing.Point(87, 142);
+            this.magGrowthTextBox.Location = new System.Drawing.Point(90, 116);
             this.magGrowthTextBox.MaxLength = 3;
             this.magGrowthTextBox.Multiline = true;
             this.magGrowthTextBox.Name = "magGrowthTextBox";
@@ -149,7 +132,7 @@ namespace FatesEnemyGrowthModifier
             this.sklGrowthLabel.AutoSize = true;
             this.sklGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sklGrowthLabel.ForeColor = System.Drawing.Color.Black;
-            this.sklGrowthLabel.Location = new System.Drawing.Point(13, 172);
+            this.sklGrowthLabel.Location = new System.Drawing.Point(16, 146);
             this.sklGrowthLabel.Name = "sklGrowthLabel";
             this.sklGrowthLabel.Size = new System.Drawing.Size(69, 13);
             this.sklGrowthLabel.TabIndex = 12;
@@ -157,7 +140,7 @@ namespace FatesEnemyGrowthModifier
             // 
             // sklGrowthTextBox
             // 
-            this.sklGrowthTextBox.Location = new System.Drawing.Point(87, 170);
+            this.sklGrowthTextBox.Location = new System.Drawing.Point(90, 144);
             this.sklGrowthTextBox.MaxLength = 3;
             this.sklGrowthTextBox.Multiline = true;
             this.sklGrowthTextBox.Name = "sklGrowthTextBox";
@@ -170,7 +153,7 @@ namespace FatesEnemyGrowthModifier
             this.spdGrowthLabel.AutoSize = true;
             this.spdGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spdGrowthLabel.ForeColor = System.Drawing.Color.Black;
-            this.spdGrowthLabel.Location = new System.Drawing.Point(145, 88);
+            this.spdGrowthLabel.Location = new System.Drawing.Point(148, 62);
             this.spdGrowthLabel.Name = "spdGrowthLabel";
             this.spdGrowthLabel.Size = new System.Drawing.Size(73, 13);
             this.spdGrowthLabel.TabIndex = 14;
@@ -178,7 +161,7 @@ namespace FatesEnemyGrowthModifier
             // 
             // spdGrowthTextBox
             // 
-            this.spdGrowthTextBox.Location = new System.Drawing.Point(224, 86);
+            this.spdGrowthTextBox.Location = new System.Drawing.Point(227, 60);
             this.spdGrowthTextBox.MaxLength = 3;
             this.spdGrowthTextBox.Multiline = true;
             this.spdGrowthTextBox.Name = "spdGrowthTextBox";
@@ -191,7 +174,7 @@ namespace FatesEnemyGrowthModifier
             this.lckGrowthLabel.AutoSize = true;
             this.lckGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lckGrowthLabel.ForeColor = System.Drawing.Color.Black;
-            this.lckGrowthLabel.Location = new System.Drawing.Point(146, 116);
+            this.lckGrowthLabel.Location = new System.Drawing.Point(149, 90);
             this.lckGrowthLabel.Name = "lckGrowthLabel";
             this.lckGrowthLabel.Size = new System.Drawing.Size(72, 13);
             this.lckGrowthLabel.TabIndex = 16;
@@ -199,7 +182,7 @@ namespace FatesEnemyGrowthModifier
             // 
             // lckGrowthTextBox
             // 
-            this.lckGrowthTextBox.Location = new System.Drawing.Point(224, 114);
+            this.lckGrowthTextBox.Location = new System.Drawing.Point(227, 88);
             this.lckGrowthTextBox.MaxLength = 3;
             this.lckGrowthTextBox.Multiline = true;
             this.lckGrowthTextBox.Name = "lckGrowthTextBox";
@@ -212,7 +195,7 @@ namespace FatesEnemyGrowthModifier
             this.defGrowthLabel.AutoSize = true;
             this.defGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defGrowthLabel.ForeColor = System.Drawing.Color.Black;
-            this.defGrowthLabel.Location = new System.Drawing.Point(147, 144);
+            this.defGrowthLabel.Location = new System.Drawing.Point(150, 118);
             this.defGrowthLabel.Name = "defGrowthLabel";
             this.defGrowthLabel.Size = new System.Drawing.Size(71, 13);
             this.defGrowthLabel.TabIndex = 18;
@@ -220,7 +203,7 @@ namespace FatesEnemyGrowthModifier
             // 
             // defGrowthTextBox
             // 
-            this.defGrowthTextBox.Location = new System.Drawing.Point(224, 142);
+            this.defGrowthTextBox.Location = new System.Drawing.Point(227, 116);
             this.defGrowthTextBox.MaxLength = 3;
             this.defGrowthTextBox.Multiline = true;
             this.defGrowthTextBox.Name = "defGrowthTextBox";
@@ -233,7 +216,7 @@ namespace FatesEnemyGrowthModifier
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(145, 172);
+            this.label1.Location = new System.Drawing.Point(148, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 20;
@@ -241,13 +224,38 @@ namespace FatesEnemyGrowthModifier
             // 
             // resGrowthTextBox
             // 
-            this.resGrowthTextBox.Location = new System.Drawing.Point(224, 170);
+            this.resGrowthTextBox.Location = new System.Drawing.Point(227, 144);
             this.resGrowthTextBox.MaxLength = 3;
             this.resGrowthTextBox.Multiline = true;
             this.resGrowthTextBox.Name = "resGrowthTextBox";
             this.resGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.resGrowthTextBox.TabIndex = 21;
             this.resGrowthTextBox.TextChanged += new System.EventHandler(this.resGrowthTextBox_TextChanged);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+            this.menuStrip1.TabIndex = 22;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openGameDatabinToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // openGameDatabinToolStripMenuItem
+            // 
+            this.openGameDatabinToolStripMenuItem.Name = "openGameDatabinToolStripMenuItem";
+            this.openGameDatabinToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.openGameDatabinToolStripMenuItem.Text = "Open GameData.bin";
+            this.openGameDatabinToolStripMenuItem.Click += new System.EventHandler(this.openGameDatabinToolStripMenuItem_Click);
             // 
             // FatesEnemyGrowthModifierForm
             // 
@@ -271,19 +279,18 @@ namespace FatesEnemyGrowthModifier
             this.Controls.Add(this.hpGrowthTextBox);
             this.Controls.Add(this.hpGrowthLabel);
             this.Controls.Add(this.classSelectorComboBox);
-            this.Controls.Add(this.openFile);
-            this.Controls.Add(this.filenameBox);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FatesEnemyGrowthModifierForm";
             this.Text = "Fates Enemy Growth Modifier Tool";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox filenameBox;
-        private System.Windows.Forms.Button openFile;
         private System.Windows.Forms.OpenFileDialog gameDataOpenFileDialog;
         private System.Windows.Forms.ComboBox classSelectorComboBox;
         private System.Windows.Forms.Label hpGrowthLabel;
@@ -302,6 +309,9 @@ namespace FatesEnemyGrowthModifier
         private System.Windows.Forms.TextBox defGrowthTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox resGrowthTextBox;
+        private System.Windows.Forms.ToolStripMenuItem openGameDatabinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

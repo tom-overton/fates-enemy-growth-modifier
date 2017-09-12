@@ -23,28 +23,6 @@ namespace FatesEnemyGrowthModifier
             InitializeComponent();
         }
 
-        private void openFile_Click(object sender, EventArgs e)
-        {
-            DialogResult result = gameDataOpenFileDialog.ShowDialog();
-            if (result == DialogResult.OK)
-            {
-                string file = gameDataOpenFileDialog.FileName;
-                filenameBox.Text = file;
-                try
-                {
-                    this.model = new GameDataModel(file);
-                    for (int i = 0; i < this.model.classEntries.Length; i++)
-                    {
-                        classSelectorComboBox.Items.Add(ClassNameTable.GetClassNameForIndex(i));
-                    }
-                }
-                catch (Exception ex)
-                {
-                    ShowErrorBox("An error occurred while opening the GameData.bin file: \n" + ex.Message);
-                }
-            }
-        }
-
         private void ShowErrorBox(string message)
         {
             MessageBox.Show(message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -120,6 +98,27 @@ namespace FatesEnemyGrowthModifier
         private void resGrowthTextBox_TextChanged(object sender, EventArgs e)
         {
             ValidateAndSetGrowthInput(resGrowthTextBox, ref this.currentClassEntry.EnemyResistanceGrowth);
+        }
+
+        private void openGameDatabinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = gameDataOpenFileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string file = gameDataOpenFileDialog.FileName;
+                try
+                {
+                    this.model = new GameDataModel(file);
+                    for (int i = 0; i < this.model.classEntries.Length; i++)
+                    {
+                        classSelectorComboBox.Items.Add(ClassNameTable.GetClassNameForIndex(i));
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ShowErrorBox("An error occurred while opening the GameData.bin file: \n" + ex.Message);
+                }
+            }
         }
     }
 }
