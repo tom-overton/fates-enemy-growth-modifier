@@ -48,11 +48,15 @@ namespace FatesEnemyGrowthModifier
             this.defGrowthTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.resGrowthTextBox = new System.Windows.Forms.TextBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.topMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameDatabinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.topMenuStrip.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // gameDataOpenFileDialog
+            // 
+            this.gameDataOpenFileDialog.Filter = "Uncompressed GameData file|GameData.bin";
             // 
             // classSelectorComboBox
             // 
@@ -232,15 +236,15 @@ namespace FatesEnemyGrowthModifier
             this.resGrowthTextBox.TabIndex = 21;
             this.resGrowthTextBox.TextChanged += new System.EventHandler(this.resGrowthTextBox_TextChanged);
             // 
-            // menuStrip1
+            // topMenuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.topMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(284, 24);
-            this.menuStrip1.TabIndex = 22;
-            this.menuStrip1.Text = "menuStrip1";
+            this.topMenuStrip.Location = new System.Drawing.Point(0, 0);
+            this.topMenuStrip.Name = "topMenuStrip";
+            this.topMenuStrip.Size = new System.Drawing.Size(284, 24);
+            this.topMenuStrip.TabIndex = 22;
+            this.topMenuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -279,12 +283,12 @@ namespace FatesEnemyGrowthModifier
             this.Controls.Add(this.hpGrowthTextBox);
             this.Controls.Add(this.hpGrowthLabel);
             this.Controls.Add(this.classSelectorComboBox);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.topMenuStrip);
+            this.MainMenuStrip = this.topMenuStrip;
             this.Name = "FatesEnemyGrowthModifierForm";
             this.Text = "Fates Enemy Growth Modifier Tool";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.topMenuStrip.ResumeLayout(false);
+            this.topMenuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,7 +315,7 @@ namespace FatesEnemyGrowthModifier
         private System.Windows.Forms.TextBox resGrowthTextBox;
         private System.Windows.Forms.ToolStripMenuItem openGameDatabinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip topMenuStrip;
     }
 }
 
