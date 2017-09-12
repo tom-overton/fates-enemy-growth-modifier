@@ -27,5 +27,27 @@ namespace FatesEnemyGrowthModifier
                 this.classEntries[i] = new ClassEntry(classEntryBytes);
             }
         }
+
+        public void WriteCurrentModelToFile()
+        {
+            // Seek to the first enemy growth entry
+            this.file.Seek(START_OF_CLASS_ENTRIES, SeekOrigin.Begin);
+            this.file.Seek(ClassOffsets.ENEMY_HP_GROWTH, SeekOrigin.Current);
+
+            for (int i = 0; i < this.classEntries.Length; i++)
+            {
+                this.file.WriteByte(this.classEntries[i].EnemyHpGrowth);
+                this.file.WriteByte(this.classEntries[i].EnemyStrengthGrowth);
+                this.file.WriteByte(this.classEntries[i].EnemyMagicGrowth);
+                this.file.WriteByte(this.classEntries[i].EnemySkillGrowth);
+                this.file.WriteByte(this.classEntries[i].EnemySpeedGrowth);
+                this.file.WriteByte(this.classEntries[i].EnemyLuckGrowth);
+                this.file.WriteByte(this.classEntries[i].EnemyDefenseGrowth);
+                this.file.WriteByte(this.classEntries[i].EnemyResistanceGrowth);
+
+                // Seek to the start of the next enemy growth entry
+                this.file.Seek(Constants.CLASS_ENTRY_SIZE - 8, SeekOrigin.Current);
+            }
+        }
     }
 }

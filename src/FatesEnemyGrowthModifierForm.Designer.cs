@@ -51,12 +51,13 @@ namespace FatesEnemyGrowthModifier
             this.topMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openGameDatabinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveGameDatabinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.topMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // gameDataOpenFileDialog
             // 
-            this.gameDataOpenFileDialog.Filter = "Uncompressed GameData file|GameData.bin";
+            this.gameDataOpenFileDialog.Filter = "Uncompressed GameData file|*.bin";
             // 
             // classSelectorComboBox
             // 
@@ -249,7 +250,8 @@ namespace FatesEnemyGrowthModifier
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openGameDatabinToolStripMenuItem});
+            this.openGameDatabinToolStripMenuItem,
+            this.saveGameDatabinToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -260,6 +262,14 @@ namespace FatesEnemyGrowthModifier
             this.openGameDatabinToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.openGameDatabinToolStripMenuItem.Text = "Open GameData.bin";
             this.openGameDatabinToolStripMenuItem.Click += new System.EventHandler(this.openGameDatabinToolStripMenuItem_Click);
+            // 
+            // saveGameDatabinToolStripMenuItem
+            // 
+            this.saveGameDatabinToolStripMenuItem.Enabled = false;
+            this.saveGameDatabinToolStripMenuItem.Name = "saveGameDatabinToolStripMenuItem";
+            this.saveGameDatabinToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.saveGameDatabinToolStripMenuItem.Text = "Save GameData.bin";
+            this.saveGameDatabinToolStripMenuItem.Click += new System.EventHandler(this.saveGameDatabinToolStripMenuItem_Click);
             // 
             // FatesEnemyGrowthModifierForm
             // 
@@ -316,6 +326,7 @@ namespace FatesEnemyGrowthModifier
         private System.Windows.Forms.ToolStripMenuItem openGameDatabinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.MenuStrip topMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem saveGameDatabinToolStripMenuItem;
     }
 }
 

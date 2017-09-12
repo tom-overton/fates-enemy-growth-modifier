@@ -51,6 +51,7 @@ namespace FatesEnemyGrowthModifier
                 {
                     growthValue = (byte)inputGrowth;
                     changedTextBox.BackColor = Color.White;
+                    saveGameDatabinToolStripMenuItem.Enabled = true;
                     return;
                 }
             }
@@ -58,6 +59,7 @@ namespace FatesEnemyGrowthModifier
             // If we got to this point, the input is invalid. Change the color of the input box
             // to indicate this to the user.
             changedTextBox.BackColor = Color.FromArgb(255, 128, 128);
+            saveGameDatabinToolStripMenuItem.Enabled = false;
         }
 
         private void hpGrowthTextBox_TextChanged(object sender, EventArgs e)
@@ -113,12 +115,23 @@ namespace FatesEnemyGrowthModifier
                     {
                         classSelectorComboBox.Items.Add(ClassNameTable.GetClassNameForIndex(i));
                     }
+
+                    // Show the "None" class upon first load.
+                    classSelectorComboBox.SelectedIndex = 0;
+
+                    // We finished loading, so let's give the user an option to save.
+                    saveGameDatabinToolStripMenuItem.Enabled = true;
                 }
                 catch (Exception ex)
                 {
                     ShowErrorBox("An error occurred while opening the GameData.bin file: \n" + ex.Message);
                 }
             }
+        }
+
+        private void saveGameDatabinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.model.WriteCurrentModelToFile();
         }
     }
 }
