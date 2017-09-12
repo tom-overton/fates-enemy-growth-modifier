@@ -1,11 +1,6 @@
 ﻿// Copyright (c) 2017 Tom Overton
 
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FatesEnemyGrowthModifier
 {
