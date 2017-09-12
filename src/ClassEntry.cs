@@ -23,6 +23,11 @@ namespace FatesEnemyGrowthModifier
 
         #endregion
 
+        public ClassEntry()
+        {
+            // Only used to set the default class entry before the user loads a class from GameData.bin
+        }
+
         public ClassEntry(byte[] classEntryBytes)
         {
             if (classEntryBytes.Length != Constants.CLASS_ENTRY_SIZE)

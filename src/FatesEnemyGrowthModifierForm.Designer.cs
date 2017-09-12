@@ -95,10 +95,12 @@ namespace FatesEnemyGrowthModifier
             // hpGrowthTextBox
             // 
             this.hpGrowthTextBox.Location = new System.Drawing.Point(87, 86);
+            this.hpGrowthTextBox.MaxLength = 3;
             this.hpGrowthTextBox.Multiline = true;
             this.hpGrowthTextBox.Name = "hpGrowthTextBox";
             this.hpGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.hpGrowthTextBox.TabIndex = 7;
+            this.hpGrowthTextBox.TextChanged += new System.EventHandler(this.hpGrowthTextBox_TextChanged);
             // 
             // strGrowthLabel
             // 
@@ -114,10 +116,12 @@ namespace FatesEnemyGrowthModifier
             // strGrowthTextBox
             // 
             this.strGrowthTextBox.Location = new System.Drawing.Point(87, 114);
+            this.strGrowthTextBox.MaxLength = 3;
             this.strGrowthTextBox.Multiline = true;
             this.strGrowthTextBox.Name = "strGrowthTextBox";
             this.strGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.strGrowthTextBox.TabIndex = 9;
+            this.strGrowthTextBox.TextChanged += new System.EventHandler(this.strGrowthTextBox_TextChanged);
             // 
             // magGrowthLabel
             // 
@@ -133,10 +137,12 @@ namespace FatesEnemyGrowthModifier
             // magGrowthTextBox
             // 
             this.magGrowthTextBox.Location = new System.Drawing.Point(87, 142);
+            this.magGrowthTextBox.MaxLength = 3;
             this.magGrowthTextBox.Multiline = true;
             this.magGrowthTextBox.Name = "magGrowthTextBox";
             this.magGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.magGrowthTextBox.TabIndex = 11;
+            this.magGrowthTextBox.TextChanged += new System.EventHandler(this.magGrowthTextBox_TextChanged);
             // 
             // sklGrowthLabel
             // 
@@ -152,10 +158,12 @@ namespace FatesEnemyGrowthModifier
             // sklGrowthTextBox
             // 
             this.sklGrowthTextBox.Location = new System.Drawing.Point(87, 170);
+            this.sklGrowthTextBox.MaxLength = 3;
             this.sklGrowthTextBox.Multiline = true;
             this.sklGrowthTextBox.Name = "sklGrowthTextBox";
             this.sklGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.sklGrowthTextBox.TabIndex = 13;
+            this.sklGrowthTextBox.TextChanged += new System.EventHandler(this.sklGrowthTextBox_TextChanged);
             // 
             // spdGrowthLabel
             // 
@@ -171,10 +179,12 @@ namespace FatesEnemyGrowthModifier
             // spdGrowthTextBox
             // 
             this.spdGrowthTextBox.Location = new System.Drawing.Point(224, 86);
+            this.spdGrowthTextBox.MaxLength = 3;
             this.spdGrowthTextBox.Multiline = true;
             this.spdGrowthTextBox.Name = "spdGrowthTextBox";
             this.spdGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.spdGrowthTextBox.TabIndex = 15;
+            this.spdGrowthTextBox.TextChanged += new System.EventHandler(this.spdGrowthTextBox_TextChanged);
             // 
             // lckGrowthLabel
             // 
@@ -190,10 +200,12 @@ namespace FatesEnemyGrowthModifier
             // lckGrowthTextBox
             // 
             this.lckGrowthTextBox.Location = new System.Drawing.Point(224, 114);
+            this.lckGrowthTextBox.MaxLength = 3;
             this.lckGrowthTextBox.Multiline = true;
             this.lckGrowthTextBox.Name = "lckGrowthTextBox";
             this.lckGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.lckGrowthTextBox.TabIndex = 17;
+            this.lckGrowthTextBox.TextChanged += new System.EventHandler(this.lckGrowthTextBox_TextChanged);
             // 
             // defGrowthLabel
             // 
@@ -209,10 +221,12 @@ namespace FatesEnemyGrowthModifier
             // defGrowthTextBox
             // 
             this.defGrowthTextBox.Location = new System.Drawing.Point(224, 142);
+            this.defGrowthTextBox.MaxLength = 3;
             this.defGrowthTextBox.Multiline = true;
             this.defGrowthTextBox.Name = "defGrowthTextBox";
             this.defGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.defGrowthTextBox.TabIndex = 19;
+            this.defGrowthTextBox.TextChanged += new System.EventHandler(this.defGrowthTextBox_TextChanged);
             // 
             // label1
             // 
@@ -228,10 +242,12 @@ namespace FatesEnemyGrowthModifier
             // resGrowthTextBox
             // 
             this.resGrowthTextBox.Location = new System.Drawing.Point(224, 170);
+            this.resGrowthTextBox.MaxLength = 3;
             this.resGrowthTextBox.Multiline = true;
             this.resGrowthTextBox.Name = "resGrowthTextBox";
             this.resGrowthTextBox.Size = new System.Drawing.Size(34, 18);
             this.resGrowthTextBox.TabIndex = 21;
+            this.resGrowthTextBox.TextChanged += new System.EventHandler(this.resGrowthTextBox_TextChanged);
             // 
             // FatesEnemyGrowthModifierForm
             // 
