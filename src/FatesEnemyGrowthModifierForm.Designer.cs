@@ -30,6 +30,7 @@ namespace FatesEnemyGrowthModifier
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FatesEnemyGrowthModifierForm));
             this.gameDataOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.classSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.hpGrowthLabel = new System.Windows.Forms.Label();
@@ -332,6 +333,7 @@ namespace FatesEnemyGrowthModifier
             this.Controls.Add(this.hpGrowthLabel);
             this.Controls.Add(this.classSelectorComboBox);
             this.Controls.Add(this.topMenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.topMenuStrip;
             this.Name = "FatesEnemyGrowthModifierForm";
             this.Text = "Fates Enemy Growth Modifier Tool";
