@@ -57,7 +57,7 @@ namespace FatesEnemyGrowthModifier
             saveGameDatabinToolStripMenuItem.Enabled = false;
         }
 
-        private void ValidateGrowthRateBufInput()
+        private void ValidateGrowthRateBuffInput()
         {
             string value = growthRateBuffTextBox.Text;
             int inputGrowth;
@@ -117,7 +117,7 @@ namespace FatesEnemyGrowthModifier
 
         private void growthRateBuffTextBox_TextChanged(object sender, EventArgs e)
         {
-            ValidateGrowthRateBufInput();
+            ValidateGrowthRateBuffInput();
         }
 
         private void openGameDatabinToolStripMenuItem_Click(object sender, EventArgs e)
