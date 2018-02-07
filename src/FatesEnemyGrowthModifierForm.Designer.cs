@@ -47,7 +47,7 @@ namespace FatesEnemyGrowthModifier
             this.lckGrowthTextBox = new System.Windows.Forms.TextBox();
             this.defGrowthLabel = new System.Windows.Forms.Label();
             this.defGrowthTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.resGrowthLabel = new System.Windows.Forms.Label();
             this.resGrowthTextBox = new System.Windows.Forms.TextBox();
             this.topMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -220,16 +220,16 @@ namespace FatesEnemyGrowthModifier
             this.defGrowthTextBox.TabIndex = 19;
             this.defGrowthTextBox.TextChanged += new System.EventHandler(this.defGrowthTextBox_TextChanged);
             // 
-            // label1
+            // resGrowthLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(148, 146);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Res Growth";
+            this.resGrowthLabel.AutoSize = true;
+            this.resGrowthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resGrowthLabel.ForeColor = System.Drawing.Color.Black;
+            this.resGrowthLabel.Location = new System.Drawing.Point(148, 146);
+            this.resGrowthLabel.Name = "resGrowthLabel";
+            this.resGrowthLabel.Size = new System.Drawing.Size(73, 13);
+            this.resGrowthLabel.TabIndex = 20;
+            this.resGrowthLabel.Text = "Res Growth";
             // 
             // resGrowthTextBox
             // 
@@ -316,7 +316,7 @@ namespace FatesEnemyGrowthModifier
             this.Controls.Add(this.growthRateBuffTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.resGrowthTextBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.resGrowthLabel);
             this.Controls.Add(this.defGrowthTextBox);
             this.Controls.Add(this.defGrowthLabel);
             this.Controls.Add(this.lckGrowthTextBox);
@@ -361,7 +361,7 @@ namespace FatesEnemyGrowthModifier
         private System.Windows.Forms.TextBox lckGrowthTextBox;
         private System.Windows.Forms.Label defGrowthLabel;
         private System.Windows.Forms.TextBox defGrowthTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label resGrowthLabel;
         private System.Windows.Forms.TextBox resGrowthTextBox;
         private System.Windows.Forms.ToolStripMenuItem openGameDatabinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
