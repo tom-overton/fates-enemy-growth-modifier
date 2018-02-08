@@ -87,7 +87,7 @@ namespace FatesEnemyGrowthModifier
             // hpGrowthTextBox
             // 
             this.hpGrowthTextBox.Location = new System.Drawing.Point(90, 60);
-            this.hpGrowthTextBox.MaxLength = 3;
+            this.hpGrowthTextBox.MaxLength = 4;
             this.hpGrowthTextBox.Multiline = true;
             this.hpGrowthTextBox.Name = "hpGrowthTextBox";
             this.hpGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -108,7 +108,7 @@ namespace FatesEnemyGrowthModifier
             // strGrowthTextBox
             // 
             this.strGrowthTextBox.Location = new System.Drawing.Point(90, 88);
-            this.strGrowthTextBox.MaxLength = 3;
+            this.strGrowthTextBox.MaxLength = 4;
             this.strGrowthTextBox.Multiline = true;
             this.strGrowthTextBox.Name = "strGrowthTextBox";
             this.strGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -129,7 +129,7 @@ namespace FatesEnemyGrowthModifier
             // magGrowthTextBox
             // 
             this.magGrowthTextBox.Location = new System.Drawing.Point(90, 116);
-            this.magGrowthTextBox.MaxLength = 3;
+            this.magGrowthTextBox.MaxLength = 4;
             this.magGrowthTextBox.Multiline = true;
             this.magGrowthTextBox.Name = "magGrowthTextBox";
             this.magGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -150,7 +150,7 @@ namespace FatesEnemyGrowthModifier
             // sklGrowthTextBox
             // 
             this.sklGrowthTextBox.Location = new System.Drawing.Point(90, 144);
-            this.sklGrowthTextBox.MaxLength = 3;
+            this.sklGrowthTextBox.MaxLength = 4;
             this.sklGrowthTextBox.Multiline = true;
             this.sklGrowthTextBox.Name = "sklGrowthTextBox";
             this.sklGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -171,7 +171,7 @@ namespace FatesEnemyGrowthModifier
             // spdGrowthTextBox
             // 
             this.spdGrowthTextBox.Location = new System.Drawing.Point(227, 60);
-            this.spdGrowthTextBox.MaxLength = 3;
+            this.spdGrowthTextBox.MaxLength = 4;
             this.spdGrowthTextBox.Multiline = true;
             this.spdGrowthTextBox.Name = "spdGrowthTextBox";
             this.spdGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -192,7 +192,7 @@ namespace FatesEnemyGrowthModifier
             // lckGrowthTextBox
             // 
             this.lckGrowthTextBox.Location = new System.Drawing.Point(227, 88);
-            this.lckGrowthTextBox.MaxLength = 3;
+            this.lckGrowthTextBox.MaxLength = 4;
             this.lckGrowthTextBox.Multiline = true;
             this.lckGrowthTextBox.Name = "lckGrowthTextBox";
             this.lckGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -213,7 +213,7 @@ namespace FatesEnemyGrowthModifier
             // defGrowthTextBox
             // 
             this.defGrowthTextBox.Location = new System.Drawing.Point(227, 116);
-            this.defGrowthTextBox.MaxLength = 3;
+            this.defGrowthTextBox.MaxLength = 4;
             this.defGrowthTextBox.Multiline = true;
             this.defGrowthTextBox.Name = "defGrowthTextBox";
             this.defGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -234,7 +234,7 @@ namespace FatesEnemyGrowthModifier
             // resGrowthTextBox
             // 
             this.resGrowthTextBox.Location = new System.Drawing.Point(227, 144);
-            this.resGrowthTextBox.MaxLength = 3;
+            this.resGrowthTextBox.MaxLength = 4;
             this.resGrowthTextBox.Multiline = true;
             this.resGrowthTextBox.Name = "resGrowthTextBox";
             this.resGrowthTextBox.Size = new System.Drawing.Size(34, 18);
@@ -289,7 +289,7 @@ namespace FatesEnemyGrowthModifier
             // growthRateBuffTextBox
             // 
             this.growthRateBuffTextBox.Location = new System.Drawing.Point(227, 189);
-            this.growthRateBuffTextBox.MaxLength = 3;
+            this.growthRateBuffTextBox.MaxLength = 4;
             this.growthRateBuffTextBox.Multiline = true;
             this.growthRateBuffTextBox.Name = "growthRateBuffTextBox";
             this.growthRateBuffTextBox.Size = new System.Drawing.Size(34, 18);

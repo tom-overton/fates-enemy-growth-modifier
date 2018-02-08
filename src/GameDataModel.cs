@@ -57,14 +57,14 @@ namespace FatesEnemyGrowthModifier
 
             for (int i = 0; i < this.classEntries.Length; i++)
             {
-                this.file.WriteByte(this.classEntries[i].EnemyHpGrowth);
-                this.file.WriteByte(this.classEntries[i].EnemyStrengthGrowth);
-                this.file.WriteByte(this.classEntries[i].EnemyMagicGrowth);
-                this.file.WriteByte(this.classEntries[i].EnemySkillGrowth);
-                this.file.WriteByte(this.classEntries[i].EnemySpeedGrowth);
-                this.file.WriteByte(this.classEntries[i].EnemyLuckGrowth);
-                this.file.WriteByte(this.classEntries[i].EnemyDefenseGrowth);
-                this.file.WriteByte(this.classEntries[i].EnemyResistanceGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemyHpGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemyStrengthGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemyMagicGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemySkillGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemySpeedGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemyLuckGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemyDefenseGrowth);
+                this.file.WriteByte((byte)this.classEntries[i].EnemyResistanceGrowth);
 
                 // Seek to the start of the next enemy growth entry
                 this.file.Seek(Constants.CLASS_ENTRY_SIZE - 8, SeekOrigin.Current);
@@ -108,19 +108,19 @@ namespace FatesEnemyGrowthModifier
             return BitConverter.ToInt32(dataBytes, 0);
         }
 
-        private byte AddValueToByteWithoutOverflow(byte b, int value)
+        private sbyte AddValueToByteWithoutOverflow(sbyte b, int value)
         {
             long sum = b + value;
-            if (sum < 0)
+            if (sum < -128)
             {
-                sum = 0;
+                sum = -128;
             }
-            if (sum > 255)
+            if (sum > 127)
             {
-                sum = 255;
+                sum = 127;
             }
 
-            return (byte)sum;
+            return (sbyte)sum;
         }
     }
 }

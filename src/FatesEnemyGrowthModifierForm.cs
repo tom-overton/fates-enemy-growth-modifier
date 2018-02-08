@@ -36,15 +36,15 @@ namespace FatesEnemyGrowthModifier
             resGrowthTextBox.Text = this.currentClassEntry.EnemyResistanceGrowth.ToString();
         }
 
-        private void ValidateAndSetGrowthInput(TextBox changedTextBox, ref byte growthValue)
+        private void ValidateAndSetGrowthInput(TextBox changedTextBox, ref sbyte growthValue)
         {
             string value = changedTextBox.Text;
             int inputGrowth;
             if (int.TryParse(value, out inputGrowth))
             {
-                if (inputGrowth >= 0 && inputGrowth <= 255)
+                if (inputGrowth >= -128 && inputGrowth <= 127)
                 {
-                    growthValue = (byte)inputGrowth;
+                    growthValue = (sbyte)inputGrowth;
                     changedTextBox.BackColor = Color.White;
                     saveGameDatabinToolStripMenuItem.Enabled = true;
                     return;

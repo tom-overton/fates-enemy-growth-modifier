@@ -8,14 +8,14 @@ namespace FatesEnemyGrowthModifier
     {
         #region class entry member declarations
 
-        public byte EnemyHpGrowth;
-        public byte EnemyStrengthGrowth;
-        public byte EnemyMagicGrowth;
-        public byte EnemySkillGrowth;
-        public byte EnemySpeedGrowth;
-        public byte EnemyLuckGrowth;
-        public byte EnemyDefenseGrowth;
-        public byte EnemyResistanceGrowth;
+        public sbyte EnemyHpGrowth;
+        public sbyte EnemyStrengthGrowth;
+        public sbyte EnemyMagicGrowth;
+        public sbyte EnemySkillGrowth;
+        public sbyte EnemySpeedGrowth;
+        public sbyte EnemyLuckGrowth;
+        public sbyte EnemyDefenseGrowth;
+        public sbyte EnemyResistanceGrowth;
 
         #endregion
 
@@ -31,14 +31,14 @@ namespace FatesEnemyGrowthModifier
                 throw new ArgumentException("You didn't pass in an entry of the right size");
             }
 
-            this.EnemyHpGrowth = classEntryBytes[ClassOffsets.ENEMY_HP_GROWTH];
-            this.EnemyStrengthGrowth = classEntryBytes[ClassOffsets.ENEMY_STRENGTH_GROWTH];
-            this.EnemyMagicGrowth = classEntryBytes[ClassOffsets.ENEMY_MAGIC_GROWTH];
-            this.EnemySkillGrowth = classEntryBytes[ClassOffsets.ENEMY_SKILL_GROWTH];
-            this.EnemySpeedGrowth = classEntryBytes[ClassOffsets.ENEMY_SPEED_GROWTH];
-            this.EnemyLuckGrowth = classEntryBytes[ClassOffsets.ENEMY_LUCK_GROWTH];
-            this.EnemyDefenseGrowth = classEntryBytes[ClassOffsets.ENEMY_DEFENSE_GROWTH];
-            this.EnemyResistanceGrowth = classEntryBytes[ClassOffsets.ENEMY_RESISTANCE_GROWTH];
+            this.EnemyHpGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_HP_GROWTH];
+            this.EnemyStrengthGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_STRENGTH_GROWTH];
+            this.EnemyMagicGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_MAGIC_GROWTH];
+            this.EnemySkillGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_SKILL_GROWTH];
+            this.EnemySpeedGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_SPEED_GROWTH];
+            this.EnemyLuckGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_LUCK_GROWTH];
+            this.EnemyDefenseGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_DEFENSE_GROWTH];
+            this.EnemyResistanceGrowth = (sbyte)classEntryBytes[ClassOffsets.ENEMY_RESISTANCE_GROWTH];
         }
     }
 
